@@ -39,7 +39,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 200px; /* Espaçamento entre os itens do menu */
+    gap: 20px; /* Espaçamento entre os itens do menu */
 }
 
 nav ul li {
@@ -347,88 +347,20 @@ footer.dark-mode {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction:initial;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .hero-content p {
-        font-size: 1.2em;
-    }
-
-    .services-list, .steps-list, .examples-list {
-        flex-direction: column;
-    }
-
-    .service-item, .step-item, .example-item {
-        flex: 1 1 100%;
-    }
-
-    .logo {
-        width: 120px;
-    }
-
-    .hero-content .btn {
-        padding: 10px 20px;
-    }
-}
-
-/* aqui esta css do pop up */
-
-
-        .popup {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            border: 2px solid #4e6471;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 400px;
-            padding: 20px;
-            text-align: center;
-            color: #333;
-        }
-        .popup.show {
-            display: block;
-        }
-        .popup button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4e6471;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-/* Responsividade */
-@media (max-width: 768px) {
     header {
         flex-direction: column;
     }
 
     nav ul {
-
-        gap: 25px; /* Ajuste do espaçamento entre os itens do menu */
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px; /* Ajuste do espaçamento entre os itens do menu */
         align-items: center;
+        justify-content: center;
     }
 
     nav ul li {
-        margin: 10px 0;
-        margin-right: 40px;
+        margin: 10px;
     }
 
     .hero-content h1 {
@@ -469,6 +401,43 @@ footer.dark-mode {
         width: 100%;
         padding: 10px;
     }
-
 }
 
+/* CSS do pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #4e6471;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4e6471;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
