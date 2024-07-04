@@ -39,7 +39,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espaçamento entre os itens do menu */
+    gap: 200px; /* Espaçamento entre os itens do menu */
 }
 
 nav ul li {
@@ -332,12 +332,12 @@ footer.dark-mode {
 .btn-dark-mode {
     background-color: #39B54A;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .btn-dark-mode:hover {
@@ -421,13 +421,14 @@ footer.dark-mode {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px; /* Ajuste do espaçamento entre os itens do menu */
+
+        gap: 25px; /* Ajuste do espaçamento entre os itens do menu */
         align-items: center;
     }
 
     nav ul li {
         margin: 10px 0;
+        margin-right: 40px;
     }
 
     .hero-content h1 {
@@ -468,5 +469,6 @@ footer.dark-mode {
         width: 100%;
         padding: 10px;
     }
+
 }
 
