@@ -353,6 +353,7 @@ footer.dark-mode {
 
     nav ul {
         flex-direction: row;
+        margin-right: 50px;
         flex-wrap: wrap;
         gap: 10px; /* Ajuste do espaçamento entre os itens do menu */
         align-items: center;
