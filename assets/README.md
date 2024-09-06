@@ -12,6 +12,7 @@
         - **Envio de E-mail: Após o preenchimento do formulário, os dados são enviados por e-mail para o suporte técnico da TechInsight Analytics.
         - **Modo Escuro: Opção de alternar entre o modo claro e escuro para uma melhor experiência do usuário.
         - **Animações: Animações suaves ao rolar a página, melhorando a experiência visual.
+        - **Após cliente preencher e entrar em contato, o mesmo será direcionado para o whatssap.
     
 
     ## Como Usar
@@ -26,8 +27,8 @@
         - ** HTML:** Linguagem de marcação utilizada para estruturar o formulário.
         - ** CSS:** Folha de estilos utilizada para estilizar o formulário, tornando-o mais atraente e responsivo.
         - ** JavaScript:** Linguagem de programação utilizada para adicionar interatividade ao formulário, como validação de campos e envio de dados por e-mail.
-        - ** EmailJS:** Biblioteca JavaScript utilizada para enviar os dados preenchidos do formulário por e-mail.
         - ** AOS (Animate On Scroll):** Biblioteca de animações para animações suaves ao rolar a página.
+        
     
 
     ## Estrutura do Projeto
