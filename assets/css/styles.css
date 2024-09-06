@@ -20,6 +20,7 @@ header {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .header-content {
@@ -28,6 +29,7 @@ header {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
+    gap: 20px;
 }
 
 .logo-container {
@@ -37,6 +39,12 @@ header {
 .logo {
     max-height: 50px;
     transition: transform 0.3s ease;
+}
+
+.company-name h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #fff;
 }
 
 nav ul {
@@ -70,7 +78,7 @@ nav ul li a:hover {
 }
 
 #hero {
-    background: linear-gradient(to right, #2c3e50, #4e6471), url('/images/dashboard-bg.jpg') no-repeat center center/cover; /* Fundo animado */
+    background: linear-gradient(to right, #2c3e50, #4e6471); /* Fundo animado */
     color: white;
     text-align: center;
     padding: 150px 0;
@@ -79,9 +87,10 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-size: cover;
+    background-size: 200% 200%; /* Tamanho aumentado para a animação */
     background-attachment: fixed;
-    animation: backgroundAnimation 15s ease infinite;
+    animation: backgroundAnimation 15s ease infinite; /* Animação de gradiente */
+    overflow: hidden;
 }
 
 #hero::before {
@@ -117,6 +126,16 @@ nav ul li a:hover {
     font-size: 3.5em;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 span.highlight {
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content h1 span.highlight:hover {
+    color: #39B54A; /* Verde claro ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .hero-content p {
@@ -165,8 +184,27 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 150px;
-    background: url('/images/socialmediadash.png') repeat-x bottom;
     z-index: 1;
+}
+
+/* Efeito de nuvens animadas */
+.clouds {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura das nuvens */
+    background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat-x; /* Padrão de nuvens */
+    background-size: cover;
+    animation: moveClouds 60s linear infinite; /* Animação de movimento */
+    z-index: 1;
+}
+
+@keyframes moveClouds {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }
 
 #services, #automation, #other-services, #steps, #examples {
@@ -377,11 +415,13 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        padding: 15px;
     }
 
     .header-content {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     nav ul {
