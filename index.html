@@ -7,34 +7,30 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#automation">Automação</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-        <button id="dark-mode-toggle" class="btn-dark-mode">Modo Escuro</button>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="TechInsight Analytics Logo" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-database"></i> Serviços</a></li>
+                    <li><a href="#automation"><i class="fas fa-robot"></i> Automação</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="hero">
         <div class="container hero-content" data-aos="fade-up">
-            <div class="logo-container">
-                <img src="/images/logo 1.svg" 
-                alt="TechInsight Analytics Logo" class="logo">
-            </div>
             <div class="hero-text">
-                <h1>Consultoria em Power BI</h1>
-                <p>Desde a implantação, desenvolvimento, gestão de performance, sustentação, migração e suporte.</p>
-                <a href="#contact" class="btn">Clique e solicite seu orçamento</a>
-            </div>
-            <div class="hero-graphics">
-                <!-- Aqui posso adicionar imagens ou gráficos -->
+                <h1>Transforme Dados em Insights Valiosos <i class="fas fa-chart-line"></i></h1>
+                <p>Aumente a lucratividade e a eficiência da sua empresa com nossas soluções de Business Intelligence e dashboards personalizados.</p>
+                <a href="#contact" class="btn"><i class="fas fa-file-signature"></i> Solicite seu Orçamento Agora</a>
             </div>
         </div>
     </section>
@@ -199,7 +195,7 @@
                 <input type="email" id="email" name="email" placeholder="Seu E-mail Corporativo" required>
                 <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
                 <button type="submit" class="btn">Enviar</button>
-              </form>              
+            </form>              
         </div>
     </section>
 
@@ -215,10 +211,27 @@
         <button onclick="closePopup()">OK</button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" style="background-color: #4e6471;"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="/assets/script.js"></script>
+    <script>
+        function sendWhatsApp() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var mensagem = document.getElementById("mensagem").value;
+          
+            if (!name || !email || !phone || !mensagem) {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+          
+            var text = `*Novo Contato pelo Site*\n\n*Nome:* ${name}\n*Celular/WhatsApp:* ${phone}\n*E-mail:* ${email}\n*Mensagem:* ${mensagem}`;
+          
+            var url = `https://wa.me/5583987444607?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
